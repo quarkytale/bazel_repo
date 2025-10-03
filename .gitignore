@@ -1,4 +1,6 @@
 # Bazel output directories
+
+# Ignore Bazel symlinks at the root
 bazel-*/
 bazel-bin/
 bazel-out/
