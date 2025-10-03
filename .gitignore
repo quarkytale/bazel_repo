@@ -1,0 +1,15 @@
+# Bazel output directories
+bazel-*/
+bazel-bin/
+bazel-out/
+bazel-testlogs/
+
+# Editor/IDE files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
