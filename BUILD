@@ -8,6 +8,14 @@ cc_binary(
     srcs = ["main.c"],
     copts = select({
         ":use_boringssl": ["-DUSE_BORINGSSL"],
+        "//conditions:default": ["-I/usr/include"],
+    }),
+    deps = select({
+        ":use_boringssl": ["@boringssl//:ssl"],
         "//conditions:default": [],
+    }),
+    linkopts = select({
+        ":use_boringssl": [],
+        "//conditions:default": ["-lssl", "-lcrypto"],
     }),
 )

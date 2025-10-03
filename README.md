@@ -9,3 +9,9 @@ curl -Lo bazelisk-linux-amd64 https://github.com/bazelbuild/bazelisk/releases/la
 ```
 bazel build //:pg_example
 ```
+
+### Test
+Update the `use_boringssl` in the BUILD file and try
+```
+./bazel-bin/pg_example
+```
